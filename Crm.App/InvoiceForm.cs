@@ -567,7 +567,7 @@ namespace Crm.App
 					MessageBox.Show("فاکتور مورد نظر یافت نشد!", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;
 				}
-
+				
 				// 2. پر کردن متغیرهای مخفی فرم
 				_currentInvoiceId = invoice.Id;
 				_selectedCustomerId = invoice.CustomerId;
