@@ -60,7 +60,7 @@
 				Property(current => current.EconomicCode)
 					.HasColumnName("EconomicCode")
 					.IsUnicode(false)
-					.HasMaxLength(10)
+					.HasMaxLength(14)
 					.IsFixedLength()
 					;
 
@@ -100,6 +100,8 @@
 
 		// **********
 		// صرفا با نگاه طراحی بانک اطلاعاتی
+		[System.ComponentModel.DataAnnotations.Required
+		   (ErrorMessage = "انتخاب {0} الزامی است.")]
 		public System.Guid? PersonId { get; set; }
 		// **********
 
@@ -127,8 +129,12 @@
 		// **********
 		//[System.ComponentModel.DataAnnotations.StringLength
 		//	(maximumLength: 10)]
+		[System.ComponentModel.DataAnnotations.StringLength
+		   (maximumLength: 10, MinimumLength = 10, ErrorMessage = "{0} باید دقیقاً {1} رقم باشد.")]
+		[System.ComponentModel.DataAnnotations.RegularExpression
+		   (pattern: "^[0-9]*$", ErrorMessage = "{0} فقط باید شامل اعداد باشد.")]
 		[System.ComponentModel.DisplayName
-			(displayName: "کد ملی")]
+		   (displayName: "کد ملی")]
 		public string NationalCode { get; set; }
 		// **********
 
