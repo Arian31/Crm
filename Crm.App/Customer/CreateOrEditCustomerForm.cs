@@ -15,6 +15,11 @@ namespace Crm.App.Customer
 
 			// نیو کردن کلاس اصلی
 			_personRepository = new DAL.PersonRepository();
+
+			// نیو کردن ارور پرووایدر
+			formErrorProvider = new System.Windows.Forms.ErrorProvider();
+			// تنظیم جهت نمایش آیکون خطا (راست به چپ برای فارسی)
+			formErrorProvider.RightToLeft = true;
 		}
 
 		public enum FormOperation
@@ -60,8 +65,101 @@ namespace Crm.App.Customer
 			}
 		}
 
+		//private void SubmitButton_Click(object sender, System.EventArgs e)
+		//{
+		//	bool isValid = true;
+		//	if (FullName == "")
+		//		System.Windows.Forms.MessageBox.Show("FullName Test");
+		//	isValid = false;
+		//	if (FullNamePerson == "")
+		//	{
+		//		System.Windows.Forms.MessageBox.Show("FullNamePerson Test");
+		//		isValid = false;
+		//	}
+		//	if (nationalCodeTextBox.Text.Trim().ToString()=="" )
+		//	{
+		//		if (NationalCode.Length != 10)
+		//		{
+		//			System.Windows.Forms.MessageBox.Show($"NationalCode Test");
+		//			isValid = false;
+		//		}
+		//	}
+		//	// اگر به اینجا رسید، یعنی هیچ خطایی وجود ندارد
+		//	if (isValid == true)
+		//	{
+		//		this.DialogResult = System.Windows.Forms.DialogResult.OK;
+		//	}
+
+		//}
+
 		private void SubmitButton_Click(object sender, System.EventArgs e)
 		{
+			// پاک کردن خطاهای قبلی
+			formErrorProvider.Clear();
+
+			// ساختن شیء مدل و مقداردهی از فرم
+			Models.Customer customer = new Models.Customer
+			{
+				FullName = this.FullName,
+				NationalCode = this.NationalCode,
+				EconomicCode = this.EconomicCode,
+				Email = this.Email,
+				Phone = this.Phone,
+				Address = this.Address,
+				PersonId = this.PersonId
+			};
+
+			// لیست نتایج اعتبارسنجی
+			var validationResults = new System.Collections.Generic.List<System.ComponentModel.DataAnnotations.ValidationResult>();
+
+			var validationContext = new System.ComponentModel.DataAnnotations.ValidationContext(customer, null, null);
+
+			bool isValid = System.ComponentModel.DataAnnotations.Validator
+				.TryValidateObject(customer, validationContext, validationResults, true);
+
+			if (!isValid)
+			{
+				foreach (var validationResult in validationResults)
+				{
+					foreach (var memberName in validationResult.MemberNames)
+					{
+						switch (memberName)
+						{
+							case nameof(customer.FullName):
+							formErrorProvider.SetError(fullNameTextBox, validationResult.ErrorMessage);
+							break;
+
+							case nameof(customer.NationalCode):
+							formErrorProvider.SetError(nationalCodeTextBox, validationResult.ErrorMessage);
+							break;
+
+							//case nameof(customer.EconomicCode):
+							//formErrorProvider.SetError(economicCodeTextBox, validationResult.ErrorMessage);
+							//break;
+
+							//case nameof(customer.Email):
+							//formErrorProvider.SetError(emailTextBox, validationResult.ErrorMessage);
+							//break;
+
+							//case nameof(customer.Phone):
+							//formErrorProvider.SetError(phoneTextBox, validationResult.ErrorMessage);
+							//break;
+
+							//case nameof(customer.Address):
+							//formErrorProvider.SetError(addressTextBox, validationResult.ErrorMessage);
+							//break;
+
+							case nameof(customer.PersonId):
+							formErrorProvider.SetError(personNameTextBox, validationResult.ErrorMessage);
+							break;
+						}
+					}
+				}
+
+				return;
+			}
+
+			// اگر معتبر بود
 			this.DialogResult = System.Windows.Forms.DialogResult.OK;
 		}
 

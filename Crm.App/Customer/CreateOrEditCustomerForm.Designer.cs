@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			this.FormErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.personButton = new System.Windows.Forms.Button();
@@ -52,17 +51,13 @@
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.label7 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
-			((System.ComponentModel.ISupportInitialize)(this.FormErrorProvider)).BeginInit();
+			this.formErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panel2.SuspendLayout();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.formErrorProvider)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// FormErrorProvider
-			// 
-			this.FormErrorProvider.ContainerControl = this;
-			this.FormErrorProvider.RightToLeft = true;
 			// 
 			// groupBox1
 			// 
@@ -296,7 +291,11 @@
 			this.panel1.Size = new System.Drawing.Size(716, 53);
 			this.panel1.TabIndex = 0;
 			// 
-			// FormCreateOrEditCustomer
+			// formErrorProvider
+			// 
+			this.formErrorProvider.ContainerControl = this;
+			// 
+			// CreateOrEditCustomerForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -307,25 +306,23 @@
 			this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.MaximizeBox = false;
-			this.Name = "FormCreateOrEditCustomer";
+			this.Name = "CreateOrEditCustomerForm";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "FormCreateOrEditCustomer";
 			this.Load += new System.EventHandler(this.FormCreateOrEditCustomer_Load);
-			((System.ComponentModel.ISupportInitialize)(this.FormErrorProvider)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.panel2.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.formErrorProvider)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.ErrorProvider FormErrorProvider;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.TextBox nationalCodeTextBox;
 		private System.Windows.Forms.Label label2;
@@ -348,5 +345,6 @@
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Button personButton;
 		private System.Windows.Forms.TextBox personNameTextBox;
+		private System.Windows.Forms.ErrorProvider formErrorProvider;
 	}
 }
