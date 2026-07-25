@@ -545,8 +545,17 @@ namespace Crm.App
 
 		private void ListButton_Click(object sender, EventArgs e)
 		{
+			//InvoiceListForm invoiceListForm = new InvoiceListForm();
+			//invoiceListForm.ShowDialog();
 			InvoiceListForm invoiceListForm = new InvoiceListForm();
-			invoiceListForm.ShowDialog();
+			invoiceListForm.IsSelectionMode = true;
+
+			if (invoiceListForm.ShowDialog() == DialogResult.OK)
+			{
+				Guid selectedId = invoiceListForm.SelectedInvoiceId;
+
+				LoadInvoiceForEdit(selectedId);
+			}
 		}
 		// **********
 

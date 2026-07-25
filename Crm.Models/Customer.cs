@@ -48,6 +48,7 @@
 					.IsUnicode(true)
 					.HasMaxLength(75)
 					.IsVariableLength()
+					.IsRequired()
 					;
 
 				Property(current => current.NationalCode)
@@ -115,6 +116,8 @@
 		//	(maximumLength: 50)]
 		[System.ComponentModel.DisplayName
 			(displayName: "نام مشتری")]
+		[System.ComponentModel.DataAnnotations.Required
+		   (ErrorMessage = "انتخاب {0} الزامی است.")]
 		public string FullName { get; set; }
 		// **********
 

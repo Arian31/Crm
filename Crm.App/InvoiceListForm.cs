@@ -87,13 +87,16 @@ namespace Crm.App
 
 					if (selectedInvoice != null)
 					{
-						InvoiceForm frm = new InvoiceForm();
+						//InvoiceForm frm = new InvoiceForm();
 						// آیدی را مستقیماً از شیء می‌خوانیم، نه از سلول گریدویو!
-						frm.LoadInvoiceForEdit(selectedInvoice.Id);
-						frm.ShowDialog();
+						//frm.LoadInvoiceForEdit(selectedInvoice.Id);
+						//frm.ShowDialog();
 
 						// بعد از بستن فرم ویرایش، لیست رفرش شود
-						LoadData();
+						//LoadData();
+
+						SelectedInvoiceId = selectedInvoice.Id;
+						this.DialogResult = DialogResult.OK;
 					}
 				}
 			}
