@@ -27,7 +27,14 @@
 		public System.Guid ContractId { get; set; }
 		public virtual Contract Contract { get; set; }
 
-		// 💥 تغییر بزرگ
+		
+		[System.ComponentModel.DataAnnotations.Schema.NotMapped]
+		public string ProductName
+		{
+			get { return CustomerAsset != null && CustomerAsset.Product != null ? CustomerAsset.Product.Name : string.Empty; }
+		}
+
+		//  تغییر بزرگ
 		[System.ComponentModel.DisplayName("لایسنس / دارایی مشتری")]
 		public System.Guid CustomerAssetId { get; set; }
 		public virtual CustomerAsset CustomerAsset { get; set; }

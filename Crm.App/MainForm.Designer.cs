@@ -36,8 +36,9 @@
 			this.customerReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.انبارToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.commodityButton = new System.Windows.Forms.ToolStripMenuItem();
-			this.buttonGenerateInitializer = new System.Windows.Forms.Button();
 			this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.buttonGenerateInitializer = new System.Windows.Forms.Button();
+			this.contractToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -96,7 +97,8 @@
 			// 
 			this.انبارToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.commodityButton,
-            this.invoiceToolStripMenuItem});
+            this.invoiceToolStripMenuItem,
+            this.contractToolStripMenuItem});
 			this.انبارToolStripMenuItem.Name = "انبارToolStripMenuItem";
 			this.انبارToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
 			this.انبارToolStripMenuItem.Text = "انبار";
@@ -108,6 +110,13 @@
 			this.commodityButton.Text = "تعریف کالا";
 			this.commodityButton.Click += new System.EventHandler(this.commodityButton_Click);
 			// 
+			// invoiceToolStripMenuItem
+			// 
+			this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
+			this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.invoiceToolStripMenuItem.Text = "فاکتور";
+			this.invoiceToolStripMenuItem.Click += new System.EventHandler(this.InvoiceToolStripMenuItem_Click);
+			// 
 			// buttonGenerateInitializer
 			// 
 			this.buttonGenerateInitializer.Location = new System.Drawing.Point(12, 39);
@@ -118,12 +127,12 @@
 			this.buttonGenerateInitializer.UseVisualStyleBackColor = true;
 			this.buttonGenerateInitializer.Click += new System.EventHandler(this.ButtonGenerateInitializer_Click);
 			// 
-			// invoiceToolStripMenuItem
+			// contractToolStripMenuItem
 			// 
-			this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
-			this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.invoiceToolStripMenuItem.Text = "فاکتور";
-			this.invoiceToolStripMenuItem.Click += new System.EventHandler(this.InvoiceToolStripMenuItem_Click);
+			this.contractToolStripMenuItem.Name = "contractToolStripMenuItem";
+			this.contractToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.contractToolStripMenuItem.Text = "قرارداد";
+			this.contractToolStripMenuItem.Click += new System.EventHandler(this.contractToolStripMenuItem_Click);
 			// 
 			// MainForm
 			// 
@@ -158,6 +167,7 @@
 		private System.Windows.Forms.ToolStripMenuItem انبارToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem commodityButton;
 		private System.Windows.Forms.ToolStripMenuItem invoiceToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem contractToolStripMenuItem;
 	}
 }
 
