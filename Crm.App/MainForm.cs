@@ -185,7 +185,7 @@ namespace Crm.App
 			invoiceForm.Show();
 		}
 
-		private void contractToolStripMenuItem_Click(object sender, EventArgs e)
+		private void ContractToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			ContractForm contractForm = new ContractForm();
 			contractForm.Show();

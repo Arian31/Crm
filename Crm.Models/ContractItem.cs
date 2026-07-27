@@ -27,16 +27,40 @@
 		public System.Guid ContractId { get; set; }
 		public virtual Contract Contract { get; set; }
 
-		
+
+		//[System.ComponentModel.DataAnnotations.Schema.NotMapped]
+		//public string ProductName
+		//{
+		//	get { return CustomerAsset != null && CustomerAsset.Product != null ? CustomerAsset.Product.Name : string.Empty; }
+		//}
+
+		// ********** این پراپرتی‌ها را برای گول زدن گریدویو اضافه کنید **********
 		[System.ComponentModel.DataAnnotations.Schema.NotMapped]
 		public string ProductName
 		{
 			get { return CustomerAsset != null && CustomerAsset.Product != null ? CustomerAsset.Product.Name : string.Empty; }
 		}
 
+		[System.ComponentModel.DataAnnotations.Schema.NotMapped]
+		public string SoftwareSerial
+		{
+			// سریال را از داخل Asset می‌خواند
+			get { return CustomerAsset != null ? CustomerAsset.SoftwareSerial : string.Empty; }
+		}
+
+		[System.ComponentModel.DataAnnotations.Schema.NotMapped]
+		public string ComputerName
+		{
+			// نام سرور را از داخل Asset می‌خواند
+			get { return CustomerAsset != null ? CustomerAsset.ComputerName : string.Empty; }
+		}
+		// *************************************************************************
+
 		//  تغییر بزرگ
 		[System.ComponentModel.DisplayName("لایسنس / دارایی مشتری")]
 		public System.Guid CustomerAssetId { get; set; }
 		public virtual CustomerAsset CustomerAsset { get; set; }
+
+
 	}
 }

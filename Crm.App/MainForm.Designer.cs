@@ -132,7 +132,7 @@
 			this.contractToolStripMenuItem.Name = "contractToolStripMenuItem";
 			this.contractToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.contractToolStripMenuItem.Text = "قرارداد";
-			this.contractToolStripMenuItem.Click += new System.EventHandler(this.contractToolStripMenuItem_Click);
+			this.contractToolStripMenuItem.Click += new System.EventHandler(this.ContractToolStripMenuItem_Click);
 			// 
 			// MainForm
 			// 

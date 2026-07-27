@@ -39,5 +39,7 @@
 		/// </summary>
 		void DeleteCommodity(System.Guid commodityId);
 		// **********
+
+
 	}
 }

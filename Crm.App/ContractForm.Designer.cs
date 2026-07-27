@@ -30,28 +30,28 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContractForm));
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
-			this.contractNumberTextBox = new System.Windows.Forms.TextBox();
-			this.startDateMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-			this.endDateMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-			this.label4 = new System.Windows.Forms.Label();
-			this.freeWarrantyCheckBox = new System.Windows.Forms.CheckBox();
-			this.descriptionTextBox = new System.Windows.Forms.TextBox();
-			this.label5 = new System.Windows.Forms.Label();
-			this.panel2 = new System.Windows.Forms.Panel();
-			this.customerNameTextBox = new System.Windows.Forms.TextBox();
-			this.label6 = new System.Windows.Forms.Label();
-			this.selectCustomerButton = new System.Windows.Forms.Button();
-			this.itemDataGridView = new System.Windows.Forms.DataGridView();
 			this.newButton = new System.Windows.Forms.ToolStripButton();
 			this.editButton = new System.Windows.Forms.ToolStripButton();
 			this.deleteButton = new System.Windows.Forms.ToolStripButton();
 			this.submitButton = new System.Windows.Forms.ToolStripButton();
 			this.cancelButton = new System.Windows.Forms.ToolStripButton();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.freeWarrantyCheckBox = new System.Windows.Forms.CheckBox();
+			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.endDateMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+			this.startDateMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.descriptionTextBox = new System.Windows.Forms.TextBox();
+			this.contractNumberTextBox = new System.Windows.Forms.TextBox();
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.itemDataGridView = new System.Windows.Forms.DataGridView();
+			this.selectCustomerButton = new System.Windows.Forms.Button();
+			this.customerNameTextBox = new System.Windows.Forms.TextBox();
+			this.label6 = new System.Windows.Forms.Label();
 			this.toolStrip1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -73,6 +73,56 @@
 			this.toolStrip1.TabIndex = 0;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
+			// newButton
+			// 
+			this.newButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.newButton.Image = ((System.Drawing.Image)(resources.GetObject("newButton.Image")));
+			this.newButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.newButton.Name = "newButton";
+			this.newButton.Size = new System.Drawing.Size(23, 22);
+			this.newButton.Text = "toolStripButton1";
+			this.newButton.Click += new System.EventHandler(this.NewButton_Click);
+			// 
+			// editButton
+			// 
+			this.editButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.editButton.Image = ((System.Drawing.Image)(resources.GetObject("editButton.Image")));
+			this.editButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.editButton.Name = "editButton";
+			this.editButton.Size = new System.Drawing.Size(23, 22);
+			this.editButton.Text = "toolStripButton1";
+			this.editButton.Click += new System.EventHandler(this.EditButton_Click);
+			// 
+			// deleteButton
+			// 
+			this.deleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.deleteButton.Image = ((System.Drawing.Image)(resources.GetObject("deleteButton.Image")));
+			this.deleteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.deleteButton.Name = "deleteButton";
+			this.deleteButton.Size = new System.Drawing.Size(23, 22);
+			this.deleteButton.Text = "toolStripButton1";
+			this.deleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+			// 
+			// submitButton
+			// 
+			this.submitButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.submitButton.Image = ((System.Drawing.Image)(resources.GetObject("submitButton.Image")));
+			this.submitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.submitButton.Name = "submitButton";
+			this.submitButton.Size = new System.Drawing.Size(23, 22);
+			this.submitButton.Text = "toolStripButton1";
+			this.submitButton.Click += new System.EventHandler(this.SubmitButton_Click);
+			// 
+			// cancelButton
+			// 
+			this.cancelButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.cancelButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelButton.Image")));
+			this.cancelButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.cancelButton.Name = "cancelButton";
+			this.cancelButton.Size = new System.Drawing.Size(23, 22);
+			this.cancelButton.Text = "toolStripButton1";
+			this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+			// 
 			// panel1
 			// 
 			this.panel1.Controls.Add(this.freeWarrantyCheckBox);
@@ -92,58 +142,16 @@
 			this.panel1.Size = new System.Drawing.Size(508, 306);
 			this.panel1.TabIndex = 1;
 			// 
-			// label1
+			// freeWarrantyCheckBox
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(416, 19);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(80, 13);
-			this.label1.TabIndex = 3;
-			this.label1.Text = " شماره قرارداد :";
-			// 
-			// contractNumberTextBox
-			// 
-			this.contractNumberTextBox.Location = new System.Drawing.Point(237, 15);
-			this.contractNumberTextBox.Name = "contractNumberTextBox";
-			this.contractNumberTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.contractNumberTextBox.Size = new System.Drawing.Size(162, 21);
-			this.contractNumberTextBox.TabIndex = 2;
-			// 
-			// startDateMaskedTextBox
-			// 
-			this.startDateMaskedTextBox.Location = new System.Drawing.Point(273, 66);
-			this.startDateMaskedTextBox.Mask = "0000/00/00";
-			this.startDateMaskedTextBox.Name = "startDateMaskedTextBox";
-			this.startDateMaskedTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.startDateMaskedTextBox.Size = new System.Drawing.Size(100, 21);
-			this.startDateMaskedTextBox.TabIndex = 4;
-			// 
-			// endDateMaskedTextBox
-			// 
-			this.endDateMaskedTextBox.Location = new System.Drawing.Point(30, 66);
-			this.endDateMaskedTextBox.Mask = "0000/00/00";
-			this.endDateMaskedTextBox.Name = "endDateMaskedTextBox";
-			this.endDateMaskedTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.endDateMaskedTextBox.Size = new System.Drawing.Size(100, 21);
-			this.endDateMaskedTextBox.TabIndex = 4;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(416, 71);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(66, 13);
-			this.label2.TabIndex = 3;
-			this.label2.Text = "تاریخ شروع :";
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(173, 69);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(57, 13);
-			this.label3.TabIndex = 3;
-			this.label3.Text = "تاریخ پایان :";
+			this.freeWarrantyCheckBox.AutoSize = true;
+			this.freeWarrantyCheckBox.Location = new System.Drawing.Point(53, 123);
+			this.freeWarrantyCheckBox.Name = "freeWarrantyCheckBox";
+			this.freeWarrantyCheckBox.Size = new System.Drawing.Size(88, 17);
+			this.freeWarrantyCheckBox.TabIndex = 6;
+			this.freeWarrantyCheckBox.Text = "گارانتی رایگان";
+			this.freeWarrantyCheckBox.UseVisualStyleBackColor = true;
+			this.freeWarrantyCheckBox.CheckedChanged += new System.EventHandler(this.FreeWarrantyCheckBox_CheckedChanged);
 			// 
 			// numericUpDown1
 			// 
@@ -154,6 +162,42 @@
 			this.numericUpDown1.TabIndex = 5;
 			this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
+			// endDateMaskedTextBox
+			// 
+			this.endDateMaskedTextBox.Location = new System.Drawing.Point(30, 66);
+			this.endDateMaskedTextBox.Mask = "0000/00/00";
+			this.endDateMaskedTextBox.Name = "endDateMaskedTextBox";
+			this.endDateMaskedTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.endDateMaskedTextBox.Size = new System.Drawing.Size(100, 21);
+			this.endDateMaskedTextBox.TabIndex = 4;
+			// 
+			// startDateMaskedTextBox
+			// 
+			this.startDateMaskedTextBox.Location = new System.Drawing.Point(273, 66);
+			this.startDateMaskedTextBox.Mask = "0000/00/00";
+			this.startDateMaskedTextBox.Name = "startDateMaskedTextBox";
+			this.startDateMaskedTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.startDateMaskedTextBox.Size = new System.Drawing.Size(100, 21);
+			this.startDateMaskedTextBox.TabIndex = 4;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(173, 69);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(57, 13);
+			this.label3.TabIndex = 3;
+			this.label3.Text = "تاریخ پایان :";
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Location = new System.Drawing.Point(416, 175);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(54, 13);
+			this.label5.TabIndex = 3;
+			this.label5.Text = "توضیحات :";
+			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
@@ -163,15 +207,23 @@
 			this.label4.TabIndex = 3;
 			this.label4.Text = "تاریخ شروع :";
 			// 
-			// freeWarrantyCheckBox
+			// label2
 			// 
-			this.freeWarrantyCheckBox.AutoSize = true;
-			this.freeWarrantyCheckBox.Location = new System.Drawing.Point(53, 123);
-			this.freeWarrantyCheckBox.Name = "freeWarrantyCheckBox";
-			this.freeWarrantyCheckBox.Size = new System.Drawing.Size(88, 17);
-			this.freeWarrantyCheckBox.TabIndex = 6;
-			this.freeWarrantyCheckBox.Text = "گارانتی رایگان";
-			this.freeWarrantyCheckBox.UseVisualStyleBackColor = true;
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(416, 71);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(66, 13);
+			this.label2.TabIndex = 3;
+			this.label2.Text = "تاریخ شروع :";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(416, 19);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(80, 13);
+			this.label1.TabIndex = 3;
+			this.label1.Text = " شماره قرارداد :";
 			// 
 			// descriptionTextBox
 			// 
@@ -182,14 +234,13 @@
 			this.descriptionTextBox.Size = new System.Drawing.Size(369, 113);
 			this.descriptionTextBox.TabIndex = 2;
 			// 
-			// label5
+			// contractNumberTextBox
 			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(416, 175);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(54, 13);
-			this.label5.TabIndex = 3;
-			this.label5.Text = "توضیحات :";
+			this.contractNumberTextBox.Location = new System.Drawing.Point(237, 15);
+			this.contractNumberTextBox.Name = "contractNumberTextBox";
+			this.contractNumberTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.contractNumberTextBox.Size = new System.Drawing.Size(162, 21);
+			this.contractNumberTextBox.TabIndex = 2;
 			// 
 			// panel2
 			// 
@@ -202,6 +253,26 @@
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(508, 192);
 			this.panel2.TabIndex = 2;
+			// 
+			// itemDataGridView
+			// 
+			this.itemDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.itemDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.itemDataGridView.Location = new System.Drawing.Point(0, 48);
+			this.itemDataGridView.Name = "itemDataGridView";
+			this.itemDataGridView.Size = new System.Drawing.Size(508, 144);
+			this.itemDataGridView.TabIndex = 5;
+			this.itemDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ItemDataGridView_KeyDown);
+			// 
+			// selectCustomerButton
+			// 
+			this.selectCustomerButton.Location = new System.Drawing.Point(13, 9);
+			this.selectCustomerButton.Name = "selectCustomerButton";
+			this.selectCustomerButton.Size = new System.Drawing.Size(34, 23);
+			this.selectCustomerButton.TabIndex = 4;
+			this.selectCustomerButton.Text = "...";
+			this.selectCustomerButton.UseVisualStyleBackColor = true;
+			this.selectCustomerButton.Click += new System.EventHandler(this.SelectCustomerButton_Click);
 			// 
 			// customerNameTextBox
 			// 
@@ -219,70 +290,6 @@
 			this.label6.Size = new System.Drawing.Size(67, 13);
 			this.label6.TabIndex = 3;
 			this.label6.Text = "نام مشتری :";
-			// 
-			// selectCustomerButton
-			// 
-			this.selectCustomerButton.Location = new System.Drawing.Point(13, 9);
-			this.selectCustomerButton.Name = "selectCustomerButton";
-			this.selectCustomerButton.Size = new System.Drawing.Size(34, 23);
-			this.selectCustomerButton.TabIndex = 4;
-			this.selectCustomerButton.Text = "...";
-			this.selectCustomerButton.UseVisualStyleBackColor = true;
-			this.selectCustomerButton.Click += new System.EventHandler(this.SelectCustomerButton_Click);
-			// 
-			// itemDataGridView
-			// 
-			this.itemDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.itemDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.itemDataGridView.Location = new System.Drawing.Point(0, 48);
-			this.itemDataGridView.Name = "itemDataGridView";
-			this.itemDataGridView.Size = new System.Drawing.Size(508, 144);
-			this.itemDataGridView.TabIndex = 5;
-			// 
-			// newButton
-			// 
-			this.newButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.newButton.Image = ((System.Drawing.Image)(resources.GetObject("newButton.Image")));
-			this.newButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.newButton.Name = "newButton";
-			this.newButton.Size = new System.Drawing.Size(23, 22);
-			this.newButton.Text = "toolStripButton1";
-			// 
-			// editButton
-			// 
-			this.editButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.editButton.Image = ((System.Drawing.Image)(resources.GetObject("editButton.Image")));
-			this.editButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.editButton.Name = "editButton";
-			this.editButton.Size = new System.Drawing.Size(23, 22);
-			this.editButton.Text = "toolStripButton1";
-			// 
-			// deleteButton
-			// 
-			this.deleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.deleteButton.Image = ((System.Drawing.Image)(resources.GetObject("deleteButton.Image")));
-			this.deleteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.deleteButton.Name = "deleteButton";
-			this.deleteButton.Size = new System.Drawing.Size(23, 22);
-			this.deleteButton.Text = "toolStripButton1";
-			// 
-			// submitButton
-			// 
-			this.submitButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.submitButton.Image = ((System.Drawing.Image)(resources.GetObject("submitButton.Image")));
-			this.submitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.submitButton.Name = "submitButton";
-			this.submitButton.Size = new System.Drawing.Size(23, 22);
-			this.submitButton.Text = "toolStripButton1";
-			// 
-			// cancelButton
-			// 
-			this.cancelButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.cancelButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelButton.Image")));
-			this.cancelButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.cancelButton.Name = "cancelButton";
-			this.cancelButton.Size = new System.Drawing.Size(23, 22);
-			this.cancelButton.Text = "toolStripButton1";
 			// 
 			// ContractForm
 			// 

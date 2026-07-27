@@ -27,5 +27,11 @@
 		System.Collections.Generic.List<Models.Customer> GetCustomersByPersonId(System.Guid personId);
 		// **********
 
+		// **********
+		// دریافت لیست لایسنس‌ها/دارایی‌های یک مشتری خاص
+		System.Collections.Generic.List<Models.CustomerAsset> GetCustomerAssets(System.Guid customerId);
+		// **********
+
+
 	}
 }

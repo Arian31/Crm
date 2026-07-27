@@ -41,6 +41,7 @@
 			this.ConfirmButton.TabIndex = 0;
 			this.ConfirmButton.Text = "تایید";
 			this.ConfirmButton.UseVisualStyleBackColor = true;
+			this.ConfirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
 			// 
 			// assetDataGridView
 			// 
@@ -63,6 +64,7 @@
 			this.MaximizeBox = false;
 			this.Name = "SelectAssetForm";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.Load += new System.EventHandler(this.SelectAssetForm_Load);
 			((System.ComponentModel.ISupportInitialize)(this.assetDataGridView)).EndInit();
 			this.ResumeLayout(false);
 

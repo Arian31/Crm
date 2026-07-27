@@ -263,5 +263,36 @@ namespace DAL
 		}
 		// **********
 
+		// **********
+		public System.Collections.Generic.List<Models.CustomerAsset> GetCustomerAssets(System.Guid customerId)
+		{
+			Models.DatabaseContext databaseContext = null;
+			try
+			{
+				databaseContext = new Models.DatabaseContext();
+
+				// واکشی لایسنس‌های فعالِ این مشتری همراه با نام نرم‌افزار
+				var assets = databaseContext.CustomerAssets
+					.Include(a => a.Product) // برای نمایش نام نرم‌افزار در فرم
+					.Where(a => a.CustomerId == customerId && a.IsActive == true)
+					.ToList();
+
+				return assets;
+			}
+			catch (System.Exception)
+			{
+				throw;
+			}
+			finally
+			{
+				if (databaseContext != null)
+				{
+					databaseContext.Dispose();
+					databaseContext = null;
+				}
+			}
+		}
+		// **********
+
 	}
 }
