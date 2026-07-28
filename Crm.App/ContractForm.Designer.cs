@@ -256,10 +256,13 @@
 			// 
 			// itemDataGridView
 			// 
+			this.itemDataGridView.AllowUserToAddRows = false;
+			this.itemDataGridView.AllowUserToDeleteRows = false;
 			this.itemDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.itemDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.itemDataGridView.Location = new System.Drawing.Point(0, 48);
 			this.itemDataGridView.Name = "itemDataGridView";
+			this.itemDataGridView.ReadOnly = true;
 			this.itemDataGridView.Size = new System.Drawing.Size(508, 144);
 			this.itemDataGridView.TabIndex = 5;
 			this.itemDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ItemDataGridView_KeyDown);

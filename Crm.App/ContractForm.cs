@@ -94,8 +94,8 @@ namespace Crm.App
 			numericUpDown1.ValueChanged += (s, e) => _isDirty = true;
 
 			// رویدادهای گریدویو و مشتری
-			itemDataGridView.KeyDown += ItemDataGridView_KeyDown;
-			selectCustomerButton.Click += SelectCustomerButton_Click;
+			//itemDataGridView.KeyDown += ItemDataGridView_KeyDown;
+			//selectCustomerButton.Click += SelectCustomerButton_Click;
 			freeWarrantyCheckBox.CheckedChanged += FreeWarrantyCheckBox_CheckedChanged;
 		}
 		#endregion
