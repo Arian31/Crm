@@ -57,5 +57,13 @@
 
 		[System.ComponentModel.DisplayName("فعال می‌باشد؟")]
 		public bool IsActive { get; set; }
+
+		// ********** این پراپرتی را برای گول زدن گریدویو اضافه کنید **********
+		[System.ComponentModel.DataAnnotations.Schema.NotMapped]
+		public string ProductName
+		{
+			get { return Product != null ? Product.Name : string.Empty; }
+		}
+		// ********************************************************************
 	}
 }

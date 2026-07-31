@@ -52,7 +52,8 @@ namespace Crm.App
 			{
 				Name = "productName",
 				HeaderText = "نام نرم‌افزار",
-				DataPropertyName = "Product.Name",
+				//DataPropertyName = "Product.Name", // <--- این اشتباه بود
+				DataPropertyName = "ProductName",     // <--- این درست است
 				Width = 200,
 				ReadOnly = true
 			});
@@ -104,11 +105,15 @@ namespace Crm.App
 					}
 				}
 			}
-		}
 
+			// ********** این خط فراموش شده بود! **********
+			// بستن فرم و ارسال تاییدیه به فرم قرارداد
+			this.DialogResult = DialogResult.OK;
+			// *********************************************
+		}
 		private void SelectAssetForm_Load(object sender, EventArgs e)
 		{
-
+		
 		}
 	}
 }

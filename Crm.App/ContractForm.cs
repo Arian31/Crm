@@ -259,7 +259,8 @@ namespace Crm.App
 
 					// چون فاکتور در سناریوی ما اختیاری شد، برای جلوگیری از ارور EF
 					// باید InvoiceId نال بماند مگر اینکه سناریویی برای ثبت آن داشته باشیم
-					InvoiceId = Guid.Empty
+					//InvoiceId = Guid.Empty
+					InvoiceId = null
 				};
 
 				if (_currentState == FormState.Insert)

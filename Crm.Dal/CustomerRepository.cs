@@ -272,10 +272,17 @@ namespace DAL
 				databaseContext = new Models.DatabaseContext();
 
 				// واکشی لایسنس‌های فعالِ این مشتری همراه با نام نرم‌افزار
+				//var assets = databaseContext.CustomerAssets
+				//	.Include(a => a.Product) // برای نمایش نام نرم‌افزار در فرم
+				//	.Where(a => a.CustomerId == customerId && a.IsActive == true)
+				//	.ToList();
+
 				var assets = databaseContext.CustomerAssets
-					.Include(a => a.Product) // برای نمایش نام نرم‌افزار در فرم
-					.Where(a => a.CustomerId == customerId && a.IsActive == true)
-					.ToList();
+			.Include(a => a.Product)      // برای نام نرم‌افزار
+			.Include(a => a.Customer)     // اگر جایی نام مشتری لازم شد
+			.Include(a => a.Invoice)      // برای جلوگیری از Lazy Loading بعد از Dispose
+			.Where(a => a.CustomerId == customerId && a.IsActive)
+			.ToList();
 
 				return assets;
 			}

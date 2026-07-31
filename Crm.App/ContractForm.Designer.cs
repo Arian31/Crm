@@ -30,11 +30,6 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContractForm));
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-			this.newButton = new System.Windows.Forms.ToolStripButton();
-			this.editButton = new System.Windows.Forms.ToolStripButton();
-			this.deleteButton = new System.Windows.Forms.ToolStripButton();
-			this.submitButton = new System.Windows.Forms.ToolStripButton();
-			this.cancelButton = new System.Windows.Forms.ToolStripButton();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.freeWarrantyCheckBox = new System.Windows.Forms.CheckBox();
 			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -52,6 +47,11 @@
 			this.selectCustomerButton = new System.Windows.Forms.Button();
 			this.customerNameTextBox = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
+			this.newButton = new System.Windows.Forms.ToolStripButton();
+			this.editButton = new System.Windows.Forms.ToolStripButton();
+			this.deleteButton = new System.Windows.Forms.ToolStripButton();
+			this.submitButton = new System.Windows.Forms.ToolStripButton();
+			this.cancelButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -69,59 +69,9 @@
             this.cancelButton});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(508, 25);
+			this.toolStrip1.Size = new System.Drawing.Size(508, 47);
 			this.toolStrip1.TabIndex = 0;
 			this.toolStrip1.Text = "toolStrip1";
-			// 
-			// newButton
-			// 
-			this.newButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.newButton.Image = ((System.Drawing.Image)(resources.GetObject("newButton.Image")));
-			this.newButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.newButton.Name = "newButton";
-			this.newButton.Size = new System.Drawing.Size(23, 22);
-			this.newButton.Text = "toolStripButton1";
-			this.newButton.Click += new System.EventHandler(this.NewButton_Click);
-			// 
-			// editButton
-			// 
-			this.editButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.editButton.Image = ((System.Drawing.Image)(resources.GetObject("editButton.Image")));
-			this.editButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.editButton.Name = "editButton";
-			this.editButton.Size = new System.Drawing.Size(23, 22);
-			this.editButton.Text = "toolStripButton1";
-			this.editButton.Click += new System.EventHandler(this.EditButton_Click);
-			// 
-			// deleteButton
-			// 
-			this.deleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.deleteButton.Image = ((System.Drawing.Image)(resources.GetObject("deleteButton.Image")));
-			this.deleteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.deleteButton.Name = "deleteButton";
-			this.deleteButton.Size = new System.Drawing.Size(23, 22);
-			this.deleteButton.Text = "toolStripButton1";
-			this.deleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
-			// 
-			// submitButton
-			// 
-			this.submitButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.submitButton.Image = ((System.Drawing.Image)(resources.GetObject("submitButton.Image")));
-			this.submitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.submitButton.Name = "submitButton";
-			this.submitButton.Size = new System.Drawing.Size(23, 22);
-			this.submitButton.Text = "toolStripButton1";
-			this.submitButton.Click += new System.EventHandler(this.SubmitButton_Click);
-			// 
-			// cancelButton
-			// 
-			this.cancelButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.cancelButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelButton.Image")));
-			this.cancelButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.cancelButton.Name = "cancelButton";
-			this.cancelButton.Size = new System.Drawing.Size(23, 22);
-			this.cancelButton.Text = "toolStripButton1";
-			this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
 			// 
 			// panel1
 			// 
@@ -137,7 +87,7 @@
 			this.panel1.Controls.Add(this.descriptionTextBox);
 			this.panel1.Controls.Add(this.contractNumberTextBox);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel1.Location = new System.Drawing.Point(0, 25);
+			this.panel1.Location = new System.Drawing.Point(0, 47);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(508, 306);
 			this.panel1.TabIndex = 1;
@@ -293,6 +243,59 @@
 			this.label6.Size = new System.Drawing.Size(67, 13);
 			this.label6.TabIndex = 3;
 			this.label6.Text = "نام مشتری :";
+			// 
+			// newButton
+			// 
+			this.newButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.newButton.Image = global::Crm.App.Properties.Resources._1371475930_filenew;
+			this.newButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+			this.newButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.newButton.Name = "newButton";
+			this.newButton.Size = new System.Drawing.Size(44, 44);
+			this.newButton.Text = "قرارداد جدید";
+			this.newButton.Click += new System.EventHandler(this.NewButton_Click);
+			// 
+			// editButton
+			// 
+			this.editButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.editButton.Image = global::Crm.App.Properties.Resources._1371475973_document_edit;
+			this.editButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+			this.editButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.editButton.Name = "editButton";
+			this.editButton.Size = new System.Drawing.Size(44, 44);
+			this.editButton.Text = "ویرایش قرارداد";
+			this.editButton.Click += new System.EventHandler(this.EditButton_Click);
+			// 
+			// deleteButton
+			// 
+			this.deleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.deleteButton.Image = global::Crm.App.Properties.Resources._1371476007_Close_Box_Red;
+			this.deleteButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+			this.deleteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.deleteButton.Name = "deleteButton";
+			this.deleteButton.Size = new System.Drawing.Size(44, 44);
+			this.deleteButton.Text = "حذف قرارداد";
+			this.deleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+			// 
+			// submitButton
+			// 
+			this.submitButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.submitButton.Image = global::Crm.App.Properties.Resources.done;
+			this.submitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.submitButton.Name = "submitButton";
+			this.submitButton.Size = new System.Drawing.Size(23, 44);
+			this.submitButton.Text = "تایید";
+			this.submitButton.Click += new System.EventHandler(this.SubmitButton_Click);
+			// 
+			// cancelButton
+			// 
+			this.cancelButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.cancelButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelButton.Image")));
+			this.cancelButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.cancelButton.Name = "cancelButton";
+			this.cancelButton.Size = new System.Drawing.Size(23, 44);
+			this.cancelButton.Text = "انصراف";
+			this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
 			// 
 			// ContractForm
 			// 

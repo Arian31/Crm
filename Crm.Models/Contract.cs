@@ -31,7 +31,8 @@
 					.WillCascadeOnDelete(false);
 
 				// ارتباط یک به چند با فاکتور فروش مرجع
-				HasRequired(current => current.Invoice)
+				//HasRequired(current => current.Invoice)
+				HasOptional(current => current.Invoice) // <--- کلمه HasRequired به HasOptional تغییر کرد
 					.WithMany() // یک فاکتور می‌تواند در سال‌های مختلف قراردادهای تمدید متعددی داشته باشد
 					.HasForeignKey(current => current.InvoiceId)
 					.WillCascadeOnDelete(false);
@@ -89,8 +90,9 @@
 		public virtual Customer Customer { get; set; }
 
 		[System.ComponentModel.DisplayName("فاکتور مرجع")]
-		[System.ComponentModel.DataAnnotations.Required(ErrorMessage = "قرارداد باید به یک فاکتور فروش متصل باشد.")]
-		public System.Guid InvoiceId { get; set; }
+		//[System.ComponentModel.DataAnnotations.Required(ErrorMessage = "قرارداد باید به یک فاکتور فروش متصل باشد.")]
+		public System.Guid? InvoiceId { get; set; }
+
 		public virtual Invoice Invoice { get; set; }
 
 		public virtual System.Collections.Generic.List<ContractItem> ContractItems { get; set; }
